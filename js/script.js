@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', event => {
 // Script for loading thumbnail gallery
 //
 
-fetch('assets/img/links.json')  // Make sure the file name matches (case-sensitive)
+fetch('bkgb.github.io-main/assets/img/links.json')
   .then(response => response.json())
   .then(data => {
     const gallery = document.getElementById('gallery');
