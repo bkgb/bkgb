@@ -6,7 +6,7 @@
     <meta name="description" content="Thumbnail Gallery" />
     <meta name="author" content="Born.King.GA.Boy" />
     <title>Thumbnail Gallery - Born.King.GA.Boy</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
@@ -15,120 +15,180 @@
 
     <!-- Core theme CSS (includes Bootstrap) -->
     <link href="css/styles.css" rel="stylesheet" />
-          <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">$$Follow me to the MONEY$$</div>
-                <div class="masthead-heading text-uppercase">THIS WAY---></div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">$$$$$</a>
-            </div>
-        </header>
-    
+
     <style>
         /* Container for the gallery */
         #gallery {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center items horizontally */
-            gap: 20px; /* Add spacing between the items */
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
         }
 
         /* Style for the individual thumbnail images */
         #gallery a {
-            display: block; /* Make the anchor a block-level element */
-            width: 150px; /* Set the width for the thumbnails */
-            height: 100px; /* Set the height for the thumbnails */
-            overflow: hidden; /* Hide overflow if the image exceeds the container */
-            border-radius: 10px; /* Round the corners of the thumbnail containers */
-            border: 2px solid #ccc; /* Add a border around the thumbnails */
-            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            display: block;
+            width: 350px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         #gallery img {
-            width: 100%; /* Make the image fill the container */
+            width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensure the image covers the container without stretching */
+            object-fit: cover;
         }
 
         /* Add hover effect for the thumbnails */
         #gallery a:hover {
-            transform: scale(1.1); /* Slightly enlarge the thumbnail on hover */
-            border-color: #007bff; /* Change the border color on hover */
+            transform: scale(1.1);
+            border-color: #007bff;
         }
 
+        /* Masthead styling */
+        .masthead {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .masthead-subheading {
+            font-size: 1.5rem;
+            color: #6c757d;
+        }
+
+        .masthead-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">$$Follow me to the MONEY$$</div>
+            <div class="masthead-heading text-uppercase">THIS WAY---></div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#gallery">$$$$$</a>
+        </div>
+    </header>
 
     <!-- Gallery container -->
     <div id="gallery">
         <!-- Links will be dynamically inserted here by JavaScript -->
     </div>
 
-    <!-- JavaScript to dynamically load thumbnails from the JSON -->
-   <script>
-    const images = [
-        {link: "https://imagenimage.com/xess73f8qo2d/11.png", thumbnail: "https://img401.imagenimage.com/th/66536/xess73f8qo2d.jpg"},
-        {link: "https://imagenimage.com/ozqkh8wijzbe/22.png", thumbnail: "https://img401.imagenimage.com/th/66536/ozqkh8wijzbe.jpg"},
-        {link: "https://imagenimage.com/l2bj5t0y3fvg/33.png", thumbnail: "https://img401.imagenimage.com/th/66536/l2bj5t0y3fvg.jpg"},
-        {link: "https://imagenimage.com/8bf9wbbo3236/44.png", thumbnail: "https://img401.imagenimage.com/th/66536/8bf9wbbo3236.jpg"},
-        {link: "https://imagenimage.com/gbq4gl38389g/55.png", thumbnail: "https://img401.imagenimage.com/th/66536/gbq4gl38389g.jpg"},
-        {link: "https://imagenimage.com/lbsvqjpwmqes/66.png", thumbnail: "https://img401.imagenimage.com/th/66536/lbsvqjpwmqes.jpg"},
-        {link: "https://imagenimage.com/2mlzj441z353/77.png", thumbnail: "https://img401.imagenimage.com/th/66536/2mlzj441z353.jpg"},
-        {link: "https://imagenimage.com/cz3ti15vrje7/88.png", thumbnail: "https://img401.imagenimage.com/th/66536/cz3ti15vrje7.jpg"},
-        {link: "https://imagenimage.com/l5wf3p936ru2/99.png", thumbnail: "https://img401.imagenimage.com/th/66536/l5wf3p936ru2.jpg"},
-        {link: "https://imagenimage.com/ssh1x4cdw4ma/100.png", thumbnail: "https://img401.imagenimage.com/th/66536/ssh1x4cdw4ma.jpg"},
-        {link: "https://imagenimage.com/up33r2vhufga/101.png", thumbnail: "https://img401.imagenimage.com/th/66536/up33r2vhufga.jpg"},
-        {link: "https://imagenimage.com/rukqddih13bs/102.png", thumbnail: "https://img401.imagenimage.com/th/66536/rukqddih13bs.jpg"},
-        {link: "https://imagenimage.com/ya18z3bcwokz/103.png", thumbnail: "https://img401.imagenimage.com/th/66536/ya18z3bcwokz.jpg"},
-        {link: "https://imagenimage.com/iho9mz9qgsn7/104.png", thumbnail: "https://img401.imagenimage.com/th/66536/iho9mz9qgsn7.jpg"},
-        {link: "https://imagenimage.com/aht5d0gbzqnk/105.png", thumbnail: "https://img401.imagenimage.com/th/66536/aht5d0gbzqnk.jpg"},
-        {link: "https://imagenimage.com/tfb35iumfynz/106.png", thumbnail: "https://img401.imagenimage.com/th/66536/tfb35iumfynz.jpg"},
-        {link: "https://imagenimage.com/th8y5uutnqse/107.png", thumbnail: "https://img401.imagenimage.com/th/66536/th8y5uutnqse.jpg"},
-        {link: "https://imagenimage.com/9qz5hmi5a7au/108.png", thumbnail: "https://img401.imagenimage.com/th/66536/9qz5hmi5a7au.jpg"},
-        {link: "https://imagenimage.com/k5ed57zw7roo/109.png", thumbnail: "https://img401.imagenimage.com/th/66536/k5ed57zw7roo.jpg"},
-        {link: "https://imagenimage.com/806tafe78at8/1111.png", thumbnail: "https://img401.imagenimage.com/th/66536/806tafe78at8.jpg"},
-        {link: "https://imagenimage.com/veb7tug67ekj/2024-12-19_08-54-03_4930.png", thumbnail: "https://img401.imagenimage.com/th/66536/veb7tug67ekj.jpg"},
-        {link: "https://imagenimage.com/310ifczw3biy/2024-12-19_08-54-59_3242.png", thumbnail: "https://img401.imagenimage.com/th/66536/310ifczw3biy.jpg"},
-        {link: "https://imagenimage.com/v3ds4b462qbj/image.png", thumbnail: "https://img401.imagenimage.com/th/66536/v3ds4b462qbj.jpg"},
-        {link: "https://imagenimage.com/d2sbm2ukl5x3/num2.png", thumbnail: "https://img401.imagenimage.com/th/66536/d2sbm2ukl5x3.jpg"},
-        {link: "https://imagenimage.com/9k2nwee7nb64/number1.png", thumbnail: "https://img401.imagenimage.com/th/66536/9k2nwee7nb64.jpg"},
-        {link: "https://imagenimage.com/oktl3wwvsfl4/yes.png", thumbnail: "https://img401.imagenimage.com/th/66536/oktl3wwvsfl4.jpg"},
-        {link: "https://imagenimage.com/m4vwcjgs0eu9/fa4db23e3d61d661.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/m4vwcjgs0eu9.jpg"},
-        {link: "https://imagenimage.com/ipgotqnmty0a/f09a71072dc7203b.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/ipgotqnmty0a.jpg"},
-        {link: "https://imagenimage.com/h0q5iqqxhn4l/efb9f3fb5985f269.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/h0q5iqqxhn4l.jpg"},
-        {link: "https://imagenimage.com/7ss1zq3nvqp6/edd1e01aa2a56017.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/7ss1zq3nvqp6.jpg"},
-        {link: "https://imagenimage.com/ijtbpgi5iqn2/ec87d1779a216722.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/ijtbpgi5iqn2.jpg"},
-        {link: "https://imagenimage.com/jejegqttlh97/eb3678a69641755e.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/jejegqttlh97.jpg"},
-        {link: "https://imagenimage.com/kiyr0ye0p6pf/e033d124801d3534.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/kiyr0ye0p6pf.jpg"},
-        {link: "https://imagenimage.com/0ntouj1m5yq1/e1ac050f8d9fce19.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/0ntouj1m5yq1.jpg"},
-        {link: "https://imagenimage.com/4zabbfo2nc8q/da41195f742b4b6b.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/4zabbfo2nc8q.jpg"},
-        {link: "https://imagenimage.com/f8njfpfisbmb/da9af6f065ecd2f9.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/f8njfpfisbmb.jpg"}
-    ];
-</script>
+    <!-- JavaScript to dynamically load thumbnails -->
+    <script>
+        const images = [
+            {link: "https://imagenimage.com/xess73f8qo2d/11.png", thumbnail: "https://img401.imagenimage.com/th/66536/xess73f8qo2d.jpg"},
+            {link: "https://imagenimage.com/ozqkh8wijzbe/22.png", thumbnail: "https://img401.imagenimage.com/th/66536/ozqkh8wijzbe.jpg"},
+            {link: "https://imagenimage.com/l2bj5t0y3fvg/33.png", thumbnail: "https://img401.imagenimage.com/th/66536/l2bj5t0y3fvg.jpg"},
+            {link: "https://imagenimage.com/8bf9wbbo3236/44.png", thumbnail: "https://img401.imagenimage.com/th/66536/8bf9wbbo3236.jpg"},
+            {link: "https://imagenimage.com/gbq4gl38389g/55.png", thumbnail: "https://img401.imagenimage.com/th/66536/gbq4gl38389g.jpg"},
+            {link: "https://imagenimage.com/xess73f8qo2d/11.png", thumbnail: "https://img401.imagenimage.com/th/66536/xess73f8qo2d.jpg"},
+    {link: "https://imagenimage.com/ozqkh8wijzbe/22.png", thumbnail: "https://img401.imagenimage.com/th/66536/ozqkh8wijzbe.jpg"},
+    {link: "https://imagenimage.com/l2bj5t0y3fvg/33.png", thumbnail: "https://img401.imagenimage.com/th/66536/l2bj5t0y3fvg.jpg"},
+    {link: "https://imagenimage.com/8bf9wbbo3236/44.png", thumbnail: "https://img401.imagenimage.com/th/66536/8bf9wbbo3236.jpg"},
+    {link: "https://imagenimage.com/gbq4gl38389g/55.png", thumbnail: "https://img401.imagenimage.com/th/66536/gbq4gl38389g.jpg"},
+    {link: "https://imagenimage.com/lbsvqjpwmqes/66.png", thumbnail: "https://img401.imagenimage.com/th/66536/lbsvqjpwmqes.jpg"},
+    {link: "https://imagenimage.com/2mlzj441z353/77.png", thumbnail: "https://img401.imagenimage.com/th/66536/2mlzj441z353.jpg"},
+    {link: "https://imagenimage.com/cz3ti15vrje7/88.png", thumbnail: "https://img401.imagenimage.com/th/66536/cz3ti15vrje7.jpg"},
+    {link: "https://imagenimage.com/l5wf3p936ru2/99.png", thumbnail: "https://img401.imagenimage.com/th/66536/l5wf3p936ru2.jpg"},
+    {link: "https://imagenimage.com/ssh1x4cdw4ma/100.png", thumbnail: "https://img401.imagenimage.com/th/66536/ssh1x4cdw4ma.jpg"},
+    {link: "https://imagenimage.com/up33r2vhufga/101.png", thumbnail: "https://img401.imagenimage.com/th/66536/up33r2vhufga.jpg"},
+    {link: "https://imagenimage.com/rukqddih13bs/102.png", thumbnail: "https://img401.imagenimage.com/th/66536/rukqddih13bs.jpg"},
+    {link: "https://imagenimage.com/ya18z3bcwokz/103.png", thumbnail: "https://img401.imagenimage.com/th/66536/ya18z3bcwokz.jpg"},
+    {link: "https://imagenimage.com/iho9mz9qgsn7/104.png", thumbnail: "https://img401.imagenimage.com/th/66536/iho9mz9qgsn7.jpg"},
+    {link: "https://imagenimage.com/aht5d0gbzqnk/105.png", thumbnail: "https://img401.imagenimage.com/th/66536/aht5d0gbzqnk.jpg"},
+    {link: "https://imagenimage.com/tfb35iumfynz/106.png", thumbnail: "https://img401.imagenimage.com/th/66536/tfb35iumfynz.jpg"},
+    {link: "https://imagenimage.com/th8y5uutnqse/107.png", thumbnail: "https://img401.imagenimage.com/th/66536/th8y5uutnqse.jpg"},
+    {link: "https://imagenimage.com/9qz5hmi5a7au/108.png", thumbnail: "https://img401.imagenimage.com/th/66536/9qz5hmi5a7au.jpg"},
+    {link: "https://imagenimage.com/k5ed57zw7roo/109.png", thumbnail: "https://img401.imagenimage.com/th/66536/k5ed57zw7roo.jpg"},
+    {link: "https://imagenimage.com/806tafe78at8/1111.png", thumbnail: "https://img401.imagenimage.com/th/66536/806tafe78at8.jpg"},
+    {link: "https://imagenimage.com/veb7tug67ekj/2024-12-19_08-54-03_4930.png", thumbnail: "https://img401.imagenimage.com/th/66536/veb7tug67ekj.jpg"},
+    {link: "https://imagenimage.com/310ifczw3biy/2024-12-19_08-54-59_3242.png", thumbnail: "https://img401.imagenimage.com/th/66536/310ifczw3biy.jpg"},
+    {link: "https://imagenimage.com/v3ds4b462qbj/image.png", thumbnail: "https://img401.imagenimage.com/th/66536/v3ds4b462qbj.jpg"},
+    {link: "https://imagenimage.com/d2sbm2ukl5x3/num2.png", thumbnail: "https://img401.imagenimage.com/th/66536/d2sbm2ukl5x3.jpg"},
+    {link: "https://imagenimage.com/9k2nwee7nb64/number1.png", thumbnail: "https://img401.imagenimage.com/th/66536/9k2nwee7nb64.jpg"},
+    {link: "https://imagenimage.com/oktl3wwvsfl4/yes.png", thumbnail: "https://img401.imagenimage.com/th/66536/oktl3wwvsfl4.jpg"},
+            // Add more images as needed...
+        ];
 
-        	 
-
-        	
         const gallery = document.getElementById('gallery');
-        
-        // Loop through each image object and create the elements dynamically
+
         images.forEach(item => {
             const a = document.createElement('a');
-            a.href = item.link;  // The URL to open when clicked
-            a.target = '_blank';  // Open in a new tab
+            a.href = item.link;
+            a.target = '_blank';
 
             const img = document.createElement('img');
-            img.src = item.thumbnail;  // Set the image source to the thumbnail URL
-            img.alt = 'Thumbnail';  // Alt text for the image (can be customized)
+            img.src = item.thumbnail;
+            img.alt = 'Thumbnail';
 
-            // Append the image inside the anchor, and the anchor to the gallery
             a.appendChild(img);
             gallery.appendChild(a);
         });
     </script>
 </body>
+ <!-- Gallery container -->
+    <div id="gallery">
+        <!-- Links will be dynamically inserted here by JavaScript -->
+    </div>
+
+    <!-- JavaScript to dynamically load thumbnails -->
+    <script>
+       const images = [
+   
+    {link: "https://imagenimage.com/m4vwcjgs0eu9/fa4db23e3d61d661.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/m4vwcjgs0eu9.jpg"},
+    {link: "https://imagenimage.com/ipgotqnmty0a/f09a71072dc7203b.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/ipgotqnmty0a.jpg"},
+    {link: "https://imagenimage.com/h0q5iqqxhn4l/efb9f3fb5985f269.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/h0q5iqqxhn4l.jpg"},
+    {link: "https://imagenimage.com/7ss1zq3nvqp6/edd1e01aa2a56017.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/7ss1zq3nvqp6.jpg"},
+    {link: "https://imagenimage.com/ijtbpgi5iqn2/ec87d1779a216722.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/ijtbpgi5iqn2.jpg"},
+    {link: "https://imagenimage.com/jejegqttlh97/eb3678a69641755e.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/jejegqttlh97.jpg"},
+    {link: "https://imagenimage.com/kiyr0ye0p6pf/e033d124801d3534.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/kiyr0ye0p6pf.jpg"},
+    {link: "https://imagenimage.com/0ntouj1m5yq1/e1ac050f8d9fce19.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/0ntouj1m5yq1.jpg"},
+    {link: "https://imagenimage.com/4zabbfo2nc8q/da41195f742b4b6b.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/4zabbfo2nc8q.jpg"},
+    {link: "https://imagenimage.com/f8njfpfisbmb/da9af6f065ecd2f9.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/f8njfpfisbmb.jpg"}
+];
+
+        const gallery = document.getElementById('gallery');
+
+        images.forEach(item => {
+            const a = document.createElement('a');
+            a.href = item.link;
+            a.target = '_blank';
+
+            const img = document.createElement('img');
+            img.src = item.thumbnail;
+            img.alt = 'Thumbnail';
+
+            a.appendChild(img);
+            gallery.appendChild(a);
+        });
+    </script>
+</body>
+
+
+
 </html>
 
 <body>
