@@ -4,7 +4,7 @@
 // Script for loading thumbnail gallery
 //
 
-fetch('links.json')
+fetch('img.json')
   .then(response => response.json())
   .then(data => {
     const gallery = document.getElementById('gallery');
