@@ -48,6 +48,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+//
+//script
+//
+
 fetch('assets/links.Json')
   .then(response => response.json())
   .then(data => {
