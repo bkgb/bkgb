@@ -1,10 +1,43 @@
 [
   {
-    "thumbnail": "https://example.com/image1.jpg",
-    "link": "https://destination1.com"
+    "thumbnail": "https://imagetwist.com/m4vwcjgs0eu9/fa4db23e3d61d661.jpg",
+    "link": "https://imagetwist.com/m4vwcjgs0eu9/fa4db23e3d61d661.jpg"
   },
   {
-    "thumbnail": "https://example.com/image2.jpg",
-    "link": "https://destination2.com"
+    "thumbnail": "https://imagetwist.com/ipgotqnmty0a/f09a71072dc7203b.jpg",
+    "link": "https://imagetwist.com/ipgotqnmty0a/f09a71072dc7203b.jpg"
+  },
+  {
+    "thumbnail": "https://imagetwist.com/h0q5iqqxhn4l/efb9f3fb5985f269.jpg",
+    "link": "https://imagetwist.com/h0q5iqqxhn4l/efb9f3fb5985f269.jpg"
+  },
+  {
+    "thumbnail": "https://imagetwist.com/7ss1zq3nvqp6/edd1e01aa2a56017.jpg",
+    "link": "https://imagetwist.com/7ss1zq3nvqp6/edd1e01aa2a56017.jpg"
+  },
+  {
+    "thumbnail": "https://imagetwist.com/ijtbpgi5iqn2/ec87d1779a216722.jpg",
+    "link": "https://imagetwist.com/ijtbpgi5iqn2/ec87d1779a216722.jpg"
+  },
+  {
+    "thumbnail": "https://imagetwist.com/jejegqttlh97/eb3678a69641755e.jpg",
+    "link": "https://imagetwist.com/jejegqttlh97/eb3678a69641755e.jpg"
+  },
+  {
+    "thumbnail": "https://imagetwist.com/kiyr0ye0p6pf/e033d124801d3534.jpg",
+    "link": "https://imagetwist.com/kiyr0ye0p6pf/e033d124801d3534.jpg"
+  },
+  {
+    "thumbnail": "https://imagetwist.com/0ntouj1m5yq1/e1ac050f8d9fce19.jpg",
+    "link": "https://imagetwist.com/0ntouj1m5yq1/e1ac050f8d9fce19.jpg"
+  },
+  {
+    "thumbnail": "https://imagetwist.com/4zabbfo2nc8q/da41195f742b4b6b.jpg",
+    "link": "https://imagetwist.com/4zabbfo2nc8q/da41195f742b4b6b.jpg"
+  },
+  {
+    "thumbnail": "https://imagetwist.com/f8njfpfisbmb/da9af6f065ecd2f9.jpg",
+    "link": "https://imagetwist.com/f8njfpfisbmb/da9af6f065ecd2f9.jpg"
   }
+  // Add more entries...
 ]
