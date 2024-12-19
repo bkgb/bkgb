@@ -15,53 +15,93 @@
 
     <!-- Core theme CSS (includes Bootstrap) -->
     <link href="css/styles.css" rel="stylesheet" />
-
-    <!-- Custom Styles for Thumbnail Gallery -->
+          <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">$$Follow me to the MONEY$$</div>
+                <div class="masthead-heading text-uppercase">THIS WAY---></div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">$$$$$</a>
+            </div>
+        </header>
+    
     <style>
+        /* Container for the gallery */
         #gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            justify-content: center; /* Center items horizontally */
+            gap: 20px; /* Add spacing between the items */
+            padding: 20px;
         }
+
+        /* Style for the individual thumbnail images */
+        #gallery a {
+            display: block; /* Make the anchor a block-level element */
+            width: 150px; /* Set the width for the thumbnails */
+            height: 100px; /* Set the height for the thumbnails */
+            overflow: hidden; /* Hide overflow if the image exceeds the container */
+            border-radius: 10px; /* Round the corners of the thumbnail containers */
+            border: 2px solid #ccc; /* Add a border around the thumbnails */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
         #gallery img {
-            width: 150px;
-            height: 100px;
-            object-fit: cover;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: 100%; /* Make the image fill the container */
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container without stretching */
         }
+
+        /* Add hover effect for the thumbnails */
+        #gallery a:hover {
+            transform: scale(1.1); /* Slightly enlarge the thumbnail on hover */
+            border-color: #007bff; /* Change the border color on hover */
+        }
+
     </style>
 </head>
 <body>
-    <div id="gallery"></div>
 
+    <!-- Gallery container -->
+    <div id="gallery">
+        <!-- Links will be dynamically inserted here by JavaScript -->
+    </div>
 
-    <!-- JavaScript to load gallery dynamically from JSON -->
+    <!-- JavaScript to dynamically load thumbnails from the JSON -->
     <script>
-        fetch('links.json')
-            .then(response => response.json())
-            .then(data => {
-                const gallery = document.getElementById('gallery');
-                data.forEach(item => {
-                    // Create an anchor tag and set href to the link in the JSON
-                    const a = document.createElement('a');
-                    a.href = item.link;
-                    a.target = '_blank'; // Open in a new tab
-                    
-                    // Create an image tag for the thumbnail
-                    const img = document.createElement('img');
-                    img.src = item.thumbnail; // Set the image source
-                    img.alt = 'Thumbnail'; // Set alt text
+        const images = [
+            {link: "https://imagenimage.com/m4vwcjgs0eu9/fa4db23e3d61d661.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/m4vwcjgs0eu9.jpg"},
+            {link: "https://imagenimage.com/ipgotqnmty0a/f09a71072dc7203b.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/ipgotqnmty0a.jpg"},
+            {link: "https://imagenimage.com/h0q5iqqxhn4l/efb9f3fb5985f269.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/h0q5iqqxhn4l.jpg"},
+            {link: "https://imagenimage.com/7ss1zq3nvqp6/edd1e01aa2a56017.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/7ss1zq3nvqp6.jpg"},
+            {link: "https://imagenimage.com/ijtbpgi5iqn2/ec87d1779a216722.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/ijtbpgi5iqn2.jpg"},
+            {link: "https://imagenimage.com/jejegqttlh97/eb3678a69641755e.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/jejegqttlh97.jpg"},
+            {link: "https://imagenimage.com/kiyr0ye0p6pf/e033d124801d3534.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/kiyr0ye0p6pf.jpg"},
+            {link: "https://imagenimage.com/0ntouj1m5yq1/e1ac050f8d9fce19.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/0ntouj1m5yq1.jpg"},
+            {link: "https://imagenimage.com/4zabbfo2nc8q/da41195f742b4b6b.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/4zabbfo2nc8q.jpg"},
+            {link: "https://imagenimage.com/f8njfpfisbmb/da9af6f065ecd2f9.jpg", thumbnail: "https://img34.imagenimage.com/th/66379/f8njfpfisbmb.jpg"},
+            // Add more image objects as needed
+        ];
 
-                    // Append the image to the anchor tag, and the anchor tag to the gallery
-                    a.appendChild(img);
-                    gallery.appendChild(a);
-                });
-            })
-            .catch(error => console.error('Error loading the thumbnail data:', error));
+        const gallery = document.getElementById('gallery');
+        
+        // Loop through each image object and create the elements dynamically
+        images.forEach(item => {
+            const a = document.createElement('a');
+            a.href = item.link;  // The URL to open when clicked
+            a.target = '_blank';  // Open in a new tab
+
+            const img = document.createElement('img');
+            img.src = item.thumbnail;  // Set the image source to the thumbnail URL
+            img.alt = 'Thumbnail';  // Alt text for the image (can be customized)
+
+            // Append the image inside the anchor, and the anchor to the gallery
+            a.appendChild(img);
+            gallery.appendChild(a);
+        });
     </script>
 </body>
 </html>
+
 <body>
     <body id="page-top">
         <!-- Navigation-->
@@ -83,14 +123,7 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">$$Follow me to the MONEY$$</div>
-                <div class="masthead-heading text-uppercase">THIS WAY---></div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">$$$$$</a>
-            </div>
-        </header>
+  
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
