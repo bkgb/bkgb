@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', event => {
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    //  Activate Bootstrap scrollspy on the main nav element
+    // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -49,10 +49,10 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 //
-//script
+// Script for loading thumbnail gallery
 //
 
-fetch('assets/links.Json')
+fetch('assets/img/links.json')  // Make sure the file name matches (case-sensitive)
   .then(response => response.json())
   .then(data => {
     const gallery = document.getElementById('gallery');
@@ -63,7 +63,7 @@ fetch('assets/links.Json')
 
       const img = document.createElement('img');
       img.src = item.thumbnail;
-      img.alt = 'Thumbnail';
+      img.alt = 'Thumbnail';  // You can also add item.title if available for alt
 
       a.appendChild(img);
       gallery.appendChild(a);
